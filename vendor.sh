@@ -6,34 +6,40 @@
 set -euxo pipefail
 
 ALSA_LIB_URL=https://github.com/alsa-project/alsa-lib.git
-ALSA_LIB_REV=785fd327ada6fc1778a2bb21176cb66705eb6b33 # v1.2.13
+ALSA_LIB_REV=731d5fb9d8802c72555a66ecd6bc4a5ec9005e4d # v1.2.15.1
 
 DBUS_URL=https://gitlab.freedesktop.org/dbus/dbus.git
 DBUS_REV=958bf9db2100553bcd2fe2a854e1ebb42e886054 # dbus-1.16.2
 
 DRM_URL=https://gitlab.freedesktop.org/mesa/drm.git
-DRM_REV=38ec7dbd4df3141441afafe5ac62dfc9df36a77e # libdrm-2.4.124
+DRM_REV=6bfcfc725fbe0ece0918535556d61ee567b1ffff # libdrm-2.4.131
+
+FRIBIDI_URL=https://github.com/fribidi/fribidi.git
+FRIBIDI_REV=68162babff4f39c4e2dc164a5e825af93bda9983 # v1.0.16
 
 GLIB_URL=https://gitlab.gnome.org/GNOME/glib.git
-GLIB_REV=4fc67fd461bfbf13c32579690f6280b0d0d0350d # 2.82.5
+GLIB_REV=7a54787e16ceb20cecda8ad6caab05b24a61e414 # 2.86.3
 
 IBUS_URL=https://github.com/ibus/ibus.git
-IBUS_REV=baeddb89a78d7ebb9eea384a07ea1af8bfa76e41 # 1.5.31
+IBUS_REV=3b3f22b871aac9cb4d856531bf2be73edf5cf4de # 1.5.33
 
 JACK1_URL=https://github.com/jackaudio/jack1.git
 JACK1_REV=48b2d8a525b0082dded4a9d1d6137a2767962b2a # 0.126.0
 
 LIBDECOR_URL=https://gitlab.freedesktop.org/libdecor/libdecor.git
-LIBDECOR_REV=7807ae3480f5c6a37c5e8505d94af1e764aaf704 # 0.2.2
+LIBDECOR_REV=149c6f0b05663aaa69fdf7f94be2483776d1a311 # 0.2.5
+
+LIBTHAI_URL=https://github.com/tlwg/libthai.git
+LIBTHAI_REV=e10e6af55634a993e60e80521ab03b1947044f38 # v0.1.30
 
 LIBURING_URL=https://github.com/axboe/liburing.git
-LIBURING_REV=08468cc3830185c75f9e7edefd88aa01e5c2f8ab # liburing-2.9
+LIBURING_REV=e07a859d4b39583c0fe0290730a9d75bccc24b5e # liburing-2.13
 
 LIBUSB_URL=https://github.com/libusb/libusb.git
-LIBUSB_REV=d52e355daa09f17ce64819122cb067b8a2ee0d4b # v1.0.27
+LIBUSB_REV=15a7ebb4d426c5ce196684347d2b7cafad862626 # v1.0.29
 
 LIBX11_URL=https://gitlab.freedesktop.org/xorg/lib/libx11.git
-LIBX11_REV=23f0352eca362515d598bfdbd8ecec070dcd1b28 # libX11-1.8.11
+LIBX11_REV=59917d28a3c41ad22d6fc52e323cafe2cdd596d5 # libX11-1.8.12
 
 LIBXCB_URL=https://gitlab.freedesktop.org/xorg/lib/libxcb.git
 LIBXCB_REV=622152ee42a310876f10602601206954b8d0613e # libxcb-1.17.0
@@ -45,13 +51,13 @@ LIBXEXT_URL=https://gitlab.freedesktop.org/xorg/lib/libxext.git
 LIBXEXT_REV=3826a58d190c2d8093d3586cb33867668cbb4553 # libXext-1.3.6
 
 LIBXFIXES_URL=https://gitlab.freedesktop.org/xorg/lib/libxfixes.git
-LIBXFIXES_REV=c1cab28e27dd1c5a81394965248b57e490ccf2ca # libXfixes-6.0.1
+LIBXFIXES_REV=70d5b0e37f8a759f3dbc218f22954347ceed094a # libXfixes-6.0.2
 
 LIBXI_URL=https://gitlab.freedesktop.org/xorg/lib/libxi.git
 LIBXI_REV=3c2d5aedd7708c75710b39268631762de904c304 # libXi-1.8.2
 
 LIBXKBCOMMON_URL=https://github.com/xkbcommon/libxkbcommon.git
-LIBXKBCOMMON_REV=76740e0c4583ae49675e7ba8213d31ee09aa00d2 # xkbcommon-1.8.0
+LIBXKBCOMMON_REV=6f76d19db72b5d450e927b41e1e96cbe3252aba8 # xkbcommon-1.13.1
 
 LIBXRANDR_URL=https://gitlab.freedesktop.org/xorg/lib/libxrandr.git
 LIBXRANDR_REV=512bf0b15b5597c721ff8c61083616ca9040fa72 # libXrandr-1.5.4
@@ -60,34 +66,37 @@ LIBXRENDER_URL=https://gitlab.freedesktop.org/xorg/lib/libxrender.git
 LIBXRENDER_REV=46e12ff9e8e4d3f0313a2f097df93dbfdc14f92f # libXrender-0.9.12
 
 LIBXSCRNSAVER_URL=https://gitlab.freedesktop.org/xorg/lib/libxscrnsaver.git
-LIBXSCRNSAVER_REV=34f3f72b88c0a0a10d618e9dfbc88474ae5ce880 # libXScrnSaver-1.2.4
+LIBXSCRNSAVER_REV=60c957ba8a727d01b376da0142aef7e18aa86fe1 # libXScrnSaver-1.2.5
+
+LIBXTST_URL=https://gitlab.freedesktop.org/xorg/lib/libxtst.git
+LIBXTST_REV=abf3ff74b97c4231d2324d66318bfa1d22e44913 #libXtst-1.2.5
 
 MESA_URL=https://gitlab.freedesktop.org/mesa/mesa.git
-MESA_REV=4fa244fddfebb21378042556862e197284ef65ac # mesa-25.0.0
+MESA_REV=a9c6420d8c39ce10bcc60a9c32308b7b9b7d34d9 # mesa-25.3.3
 
 PIPEWIRE_URL=https://gitlab.freedesktop.org/pipewire/pipewire.git
-PIPEWIRE_REV=cc7439187f61dd73b81ca69f5dbccbb52ce970b2 # 1.2.7
+PIPEWIRE_REV=fd60e04525f3a04d90bf50085222e0cc9139b4a4 # 1.4.9
 
 PULSEAUDIO_URL=https://gitlab.freedesktop.org/pulseaudio/pulseaudio.git
 PULSEAUDIO_REV=1f020889c9aa44ea0f63d7222e8c2b62c3f45f68 # v17.0
 
 SDL_URL=https://github.com/libsdl-org/SDL.git
-SDL_REV=f6864924f76e1a0b4abaefc76ae2ed22b1a8916e # release-3.2.8
+SDL_REV=a962f40bbba175e9716557a25d5d7965f134a3d3 # release-3.4.0
 
 SNDIO_URL=https://github.com/ratchov/sndio.git
 SNDIO_REV=366b5c84d57c9ce73387c51ca48755d36e3fe3a7 # v1.10.0
 
 SYSTEMD_URL=https://github.com/systemd/systemd.git
-SYSTEMD_REV=876ee10e0eb4bbb0920bdab7817a9f06cc34910f # v257.3
+SYSTEMD_REV=9ca433482f2281d71718718705ca8cd3bf562ad6 # v259
 
 WAYLAND_URL=https://gitlab.freedesktop.org/wayland/wayland.git
-WAYLAND_REV=a9fec8dd65977c57f4039ced34327204d9b9d779 # 1.23.1
+WAYLAND_REV=736d12ac67c20c60dc406dc49bb06be878501f86 # 1.24.0
 
 XCBPROTO_URL=https://gitlab.freedesktop.org/xorg/proto/xcbproto.git
 XCBPROTO_REV=77d7fc04da729ddc5ed4aacf30253726fac24dca # xcb-proto-1.17.0
 
 XORGPROTO_URL=https://gitlab.freedesktop.org/xorg/proto/xorgproto.git
-XORGPROTO_REV=67469711055522b8adb2d795b01e7ba98cb8816c # xorgproto-2024.1
+XORGPROTO_REV=c18d2bc22813793bba7f0e4e603c0104d7724802 # xorgproto-2025.1
 
 TMP_PREFIX=_tmp
 
@@ -147,7 +156,7 @@ wayland() {
 	)
 	repo_copy WAYLAND "${headers[@]}" include
 
-	version=1.23.1
+	version=1.24.0
 	version_parts=(${version//./ })
 	mkdir -p include
 	sed "$WAYLAND_DIR/src/wayland-version.h.in" \
@@ -180,6 +189,8 @@ wayland() {
 	generate "$SDL_DIR/wayland-protocols/input-timestamps-unstable-v1.xml"
 	generate "$SDL_DIR/wayland-protocols/keyboard-shortcuts-inhibit-unstable-v1.xml"
 	generate "$SDL_DIR/wayland-protocols/pointer-constraints-unstable-v1.xml"
+	generate "$SDL_DIR/wayland-protocols/pointer-gestures-unstable-v1.xml"
+	generate "$SDL_DIR/wayland-protocols/pointer-warp-v1.xml"
 	generate "$SDL_DIR/wayland-protocols/primary-selection-unstable-v1.xml"
 	generate "$SDL_DIR/wayland-protocols/relative-pointer-unstable-v1.xml"
 	generate "$SDL_DIR/wayland-protocols/tablet-v2.xml"
@@ -208,6 +219,8 @@ wayland() {
 		    "src/input-timestamps-unstable-v1-protocol.c",
 		    "src/keyboard-shortcuts-inhibit-unstable-v1-protocol.c",
 		    "src/pointer-constraints-unstable-v1-protocol.c",
+		    "src/pointer-gestures-unstable-v1-protocol.c",
+		    "src/pointer-warp-v1-protocol.c",
 		    "src/primary-selection-unstable-v1-protocol.c",
 		    "src/relative-pointer-unstable-v1-protocol.c",
 		    "src/tablet-v2-protocol.c",
@@ -227,7 +240,7 @@ wayland() {
 	curl --create-dirs --output-dir include -LZ \
 		-O "https://gitlab.freedesktop.org/libdecor/libdecor/-/raw/$LIBDECOR_REV/src/libdecor.h"
 
-	version=0.2.2
+	version=0.2.5
 	version_parts=(${version//./ })
 	cat >> build.zig <<- EOF
 		pub const libdecor_soname = "libdecor-0.so.0";
@@ -245,8 +258,11 @@ wayland() {
 	)
 	repo_copy LIBXKBCOMMON "${headers[@]}" include/xkbcommon
 
-	cat >> build.zig <<- 'EOF'
+	version=1.13.1
+	version_parts=(${version//./ })
+	cat >> build.zig <<- EOF
 		pub const xkbcommon_soname = "libxkbcommon.so.0";
+		pub const xkbcommon_version: std.SemanticVersion = .{ .major = ${version_parts[0]}, .minor = ${version_parts[1]}, .patch = ${version_parts[2]} };
 	EOF
 }
 
@@ -292,6 +308,7 @@ x11() {
 	repo_copy XORGPROTO "${headers[@]}" include/X11
 
 	headers=(
+		include/X11/extensions/XI.h
 		include/X11/extensions/XI2.h
 		include/X11/extensions/XKB.h
 		include/X11/extensions/XKBstr.h
@@ -304,6 +321,7 @@ x11() {
 		include/X11/extensions/syncconst.h
 		include/X11/extensions/syncproto.h
 		include/X11/extensions/xfixeswire.h
+		include/X11/extensions/xtestconst.h
 	)
 	repo_copy XORGPROTO "${headers[@]}" include/X11/extensions
 
@@ -339,16 +357,19 @@ x11() {
 
 	curl --create-dirs --output-dir include/X11/extensions -LZ \
 		-O "https://gitlab.freedesktop.org/xorg/lib/libxfixes/-/raw/$LIBXFIXES_REV/include/X11/extensions/Xfixes.h" \
+		-O "https://gitlab.freedesktop.org/xorg/lib/libxi/-/raw/$LIBXI_REV/include/X11/extensions/XInput.h" \
 		-O "https://gitlab.freedesktop.org/xorg/lib/libxi/-/raw/$LIBXI_REV/include/X11/extensions/XInput2.h" \
 		-O "https://gitlab.freedesktop.org/xorg/lib/libxrandr/-/raw/$LIBXRANDR_REV/include/X11/extensions/Xrandr.h" \
 		-O "https://gitlab.freedesktop.org/xorg/lib/libxrender/-/raw/$LIBXRENDER_REV/include/X11/extensions/Xrender.h" \
-		-O "https://gitlab.freedesktop.org/xorg/lib/libxscrnsaver/-/raw/$LIBXSCRNSAVER_REV/include/X11/extensions/scrnsaver.h"
+		-O "https://gitlab.freedesktop.org/xorg/lib/libxscrnsaver/-/raw/$LIBXSCRNSAVER_REV/include/X11/extensions/scrnsaver.h" \
+		-O "https://gitlab.freedesktop.org/xorg/lib/libxtst/-/raw/$LIBXTST_REV/include/X11/extensions/XTest.h"
 
 	cat >> build.zig <<- 'EOF'
 		pub const xfixes_soname = "libXfixes.so.3";
 		pub const xi_soname = "libXi.so.6";
 		pub const xrandr_soname = "libXrandr.so.2";
 		pub const xss_soname = "libXss.so.1";
+		pub const xtst_soname = "libXtst.so.6";
 	EOF
 
 	repo_ensure_cloned LIBXCB
@@ -437,7 +458,7 @@ pipewire() {
 
 	repo_copy PIPEWIRE src/pipewire/extensions/metadata.h include/pipewire/extensions
 
-	version=1.2.7
+	version=1.4.9
 	version_parts=(${version//./ })
 	api_version=0.3
 	mkdir -p include/pipewire
@@ -543,8 +564,10 @@ pipewire() {
 		spa/include/spa/utils/cleanup.h
 		spa/include/spa/utils/defs.h
 		spa/include/spa/utils/dict.h
+		spa/include/spa/utils/endian.h
 		spa/include/spa/utils/hook.h
 		spa/include/spa/utils/json.h
+		spa/include/spa/utils/json-core.h
 		spa/include/spa/utils/list.h
 		spa/include/spa/utils/result.h
 		spa/include/spa/utils/string.h
@@ -629,6 +652,7 @@ alsa() {
 		include/seqmid.h
 		include/timer.h
 		include/ump.h
+		include/ump_msg.h
 	)
 	repo_copy ALSA_LIB "${headers[@]}" include/alsa
 
@@ -658,6 +682,7 @@ alsa() {
 			#include <alsa/hwdep.h>
 			#include <alsa/control.h>
 			#include <alsa/mixer.h>
+			#include <alsa/ump_msg.h>
 			#include <alsa/seq_event.h>
 			#include <alsa/seq.h>
 			#include <alsa/seqmid.h>
@@ -666,7 +691,7 @@ alsa() {
 		cat "$ALSA_LIB_DIR/include/asoundlib-tail.h"
 	} > include/alsa/asoundlib.h
 
-	version=1.2.13
+	version=1.2.15
 	version_parts=(${version//./ })
 	mkdir -p include/alsa
 	cat > include/alsa/version.h <<- EOF
@@ -741,6 +766,8 @@ liburing() {
 	)
 	repo_copy LIBURING "${headers[@]}" include/liburing
 
+	repo_copy LIBURING src/include/liburing/io_uring/query.h include/liburing/io_uring
+
 	mkdir -p include/liburing
 	# REUSE-IgnoreStart
 	cat > include/liburing/compat.h <<- 'EOF'
@@ -748,10 +775,26 @@ liburing() {
 		#ifndef LIBURING_COMPAT_H
 		#define LIBURING_COMPAT_H
 
+		#if defined(__has_include)
+		/* introduced in C++17 & C23 */
+		/* quotes "" quotes needed for GCC < 10 */
+		#if __has_include("linux/time_types.h")
+		#include <linux/time_types.h>
+		#else
+		struct __kernel_timespec {
+			int64_t		tv_sec;
+			long long	tv_nsec;
+		};
+		#endif
+
+		#define UAPI_LINUX_IO_URING_H_SKIP_LINUX_TIME_TYPES_H 1
+		#endif
+
+		#if !defined(__has_include)
 		#include <linux/time_types.h>
 		/* <linux/time_types.h> is included above and not needed again */
 		#define UAPI_LINUX_IO_URING_H_SKIP_LINUX_TIME_TYPES_H 1
-
+		#endif
 		#include <linux/openat2.h>
 
 
@@ -765,7 +808,7 @@ liburing() {
 	EOF
 	# REUSE-IgnoreEnd
 
-	version=2.9
+	version=2.13
 	version_parts=(${version//./ })
 	mkdir -p include/liburing
 	# REUSE-IgnoreStart
@@ -780,6 +823,91 @@ liburing() {
 		#endif
 	EOF
 	# REUSE-IgnoreEnd
+}
+
+fribidi() {
+	repo_ensure_cloned FRIBIDI
+
+	headers=(
+		lib/fribidi.h
+		lib/fribidi-arabic.h
+		lib/fribidi-begindecls.h
+		lib/fribidi-bidi.h
+		lib/fribidi-bidi-types.h
+		lib/fribidi-bidi-types-list.h
+		lib/fribidi-brackets.h
+		lib/fribidi-char-sets.h
+		lib/fribidi-char-sets-list.h
+		lib/fribidi-common.h
+		lib/fribidi-deprecated.h
+		lib/fribidi-enddecls.h
+		lib/fribidi-flags.h
+		lib/fribidi-joining.h
+		lib/fribidi-joining-types.h
+		lib/fribidi-joining-types-list.h
+		lib/fribidi-mirroring.h
+		lib/fribidi-shape.h
+		lib/fribidi-types.h
+		lib/fribidi-unicode.h
+	)
+	repo_copy FRIBIDI "${headers[@]}" include
+
+	version=1.0.16
+	version_parts=(${version//./ })
+	mkdir -p include
+	sed "$FRIBIDI_DIR/lib/fribidi-config.h.in" \
+		-e 's/@configure_input@/fribidi-config.h file generated by Meson/g' \
+		-e 's/@PACKAGE@/fribidi/g' \
+		-e 's/@PACKAGE_NAME@/GNU FriBidi/g' \
+		-e 's/@PACKAGE_BUGREPORT@/https:\/\/github.com\/fribidi\/fribidi\/issues\/new/g' \
+		-e "s/@FRIBIDI_VERSION@/$version/g" \
+		-e "s/@FRIBIDI_MAJOR_VERSION@/${version_parts[0]}/g" \
+		-e "s/@FRIBIDI_MINOR_VERSION@/${version_parts[1]}/g" \
+		-e "s/@FRIBIDI_MICRO_VERSION@/${version_parts[2]}/g" \
+		-e 's/@FRIBIDI_INTERFACE_VERSION@/4/g' \
+		-e 's/@SIZEOF_INT@/4/g' \
+		-e 's/@FRIBIDI_MSVC_BUILD_PLACEHOLDER@/#undef FRIBIDI_BUILT_WITH_MSVC/g' \
+	> include/fribidi-config.h
+
+	zig run -lc \
+		-DHAVE_STRINGIZE -DDONT_HAVE_FRIBIDI_CONFIG_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DSTDC_HEADERS=1 \
+		"-Iinclude" "-I$FRIBIDI_DIR/lib" "-I$FRIBIDI_DIR/gen.tab" \
+		"$FRIBIDI_DIR/gen.tab/gen-unicode-version.c" \
+		-- "$FRIBIDI_DIR/gen.tab/unidata/ReadMe.txt" "$FRIBIDI_DIR/gen.tab/unidata/BidiMirroring.txt" gen-unicode-version \
+	> include/fribidi-unicode-version.h
+
+	cat >> build.zig <<- 'EOF'
+		pub const fribidi_soname = "libfribidi.so.0";
+	EOF
+}
+
+libthai() {
+	repo_ensure_cloned LIBTHAI
+
+	headers=(
+		include/thai/thailib.h
+		include/thai/thbrk.h
+		include/thai/thcell.h
+		include/thai/thcoll.h
+		include/thai/thctype.h
+		include/thai/thinp.h
+		include/thai/thrend.h
+		include/thai/thstr.h
+		include/thai/thwbrk.h
+		include/thai/thwchar.h
+		include/thai/thwcoll.h
+		include/thai/thwctype.h
+		include/thai/thwinp.h
+		include/thai/thwrend.h
+		include/thai/thwstr.h
+		include/thai/tis.h
+		include/thai/wtt.h
+	)
+	repo_copy LIBTHAI "${headers[@]}" include/thai
+
+	cat >> build.zig <<- 'EOF'
+		pub const libthai_soname = "libthai.so.0";
+	EOF
 }
 
 core() {
@@ -823,14 +951,21 @@ core() {
 		-e "s/@DBUS_VERSION@/$version/g" \
 	> include/x86_64-linux-gnu/dbus/dbus-arch-deps.h
 
-	# aarch64 config is identical to x86_64
+	# aarch64-gnu config is identical to x86_64-gnu
 	mkdir -p include/aarch64-linux-gnu/dbus
 	cp include/x86_64-linux-gnu/dbus/dbus-arch-deps.h include/aarch64-linux-gnu/dbus/
+	# x86_64-musl config is identical to x86_64-gnu
+	mkdir -p include/x86_64-linux-musl/dbus
+	cp include/x86_64-linux-gnu/dbus/dbus-arch-deps.h include/x86_64-linux-musl/dbus/
+	# aarch64-musl config is identical to x86_64-gnu
+	mkdir -p include/aarch64-linux-musl/dbus
+	cp include/x86_64-linux-gnu/dbus/dbus-arch-deps.h include/aarch64-linux-musl/dbus/
 
 	repo_ensure_cloned IBUS
 
 	headers=(
 		src/ibus.h
+		src/ibus-visibility.h
 		src/ibusaccelgroup.h
 		src/ibusattribute.h
 		src/ibusattrlist.h
@@ -852,6 +987,7 @@ core() {
 		src/ibuskeysyms.h
 		src/ibuskeysyms-compat.h
 		src/ibuslookuptable.h
+		src/ibusmessage.h
 		src/ibusobject.h
 		src/ibusobservedpath.h
 		src/ibuspanelservice.h
@@ -871,7 +1007,7 @@ core() {
 	)
 	repo_copy IBUS "${headers[@]}" include
 
-	version=1.5.31
+	version=1.5.33
 	version_parts=(${version//./ })
 	sed "$IBUS_DIR/src/ibusversion.h.in" \
 		-e "s/@IBUS_MAJOR_VERSION@/${version_parts[0]}/g" \
@@ -982,7 +1118,7 @@ core() {
 	)
 	repo_copy GLIB "${headers[@]}" include/glib/deprecated
 
-	version=2.82.5
+	version=2.86.3
 	version_parts=(${version//./ })
 	mkdir -p include/x86_64-linux-gnu
 	sed "$GLIB_DIR/glib/glibconfig.h.in" \
@@ -1061,9 +1197,15 @@ core() {
 		-e 's/#mesondefine G_HAVE_FREE_SIZED/#undef G_HAVE_FREE_SIZED/' \
 	> include/x86_64-linux-gnu/glibconfig.h
 
-	# aarch64 config is identical to x86_64 sans G_VA_COPY_AS_ARRAY
+	# aarch64-gnu config is identical to x86_64-gnu sans G_VA_COPY_AS_ARRAY
 	mkdir -p include/aarch64-linux-gnu
 	grep -v '^#define G_VA_COPY_AS_ARRAY 1$' include/x86_64-linux-gnu/glibconfig.h > include/aarch64-linux-gnu/glibconfig.h
+	# x86_64-musl config is identical to aarch64-gnu
+	mkdir -p include/x86_64-linux-musl/dbus
+	cp include/aarch64-linux-gnu/glibconfig.h include/x86_64-linux-musl/
+	# aarch64-musl config is identical to aarch64-gnu
+	mkdir -p include/aarch64-linux-musl/dbus
+	cp include/aarch64-linux-gnu/glibconfig.h include/aarch64-linux-musl/
 
 	mkdir -p include/glib
 	"$GLIB_DIR/tools/gen-visibility-macros.py" "$version" visibility-macros \
@@ -1309,6 +1451,8 @@ main() {
 	jack
 	libusb
 	liburing
+	fribidi
+	libthai
 	core
 
 	rm -rf "$TMP_PREFIX"

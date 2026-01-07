@@ -16,6 +16,8 @@ pub const wayland_c_files = .{
     "src/input-timestamps-unstable-v1-protocol.c",
     "src/keyboard-shortcuts-inhibit-unstable-v1-protocol.c",
     "src/pointer-constraints-unstable-v1-protocol.c",
+    "src/pointer-gestures-unstable-v1-protocol.c",
+    "src/pointer-warp-v1-protocol.c",
     "src/primary-selection-unstable-v1-protocol.c",
     "src/relative-pointer-unstable-v1-protocol.c",
     "src/tablet-v2-protocol.c",
@@ -31,8 +33,9 @@ pub const wayland_c_files = .{
     "src/xdg-toplevel-icon-v1-protocol.c",
 };
 pub const libdecor_soname = "libdecor-0.so.0";
-pub const libdecor_version: std.SemanticVersion = .{ .major = 0, .minor = 2, .patch = 2 };
+pub const libdecor_version: std.SemanticVersion = .{ .major = 0, .minor = 2, .patch = 5 };
 pub const xkbcommon_soname = "libxkbcommon.so.0";
+pub const xkbcommon_version: std.SemanticVersion = .{ .major = 1, .minor = 13, .patch = 1 };
 pub const x11_soname = "libX11.so.6";
 pub const xcursor_soname = "libXcursor.so.1";
 pub const xext_soname = "libXext.so.6";
@@ -40,6 +43,7 @@ pub const xfixes_soname = "libXfixes.so.3";
 pub const xi_soname = "libXi.so.6";
 pub const xrandr_soname = "libXrandr.so.2";
 pub const xss_soname = "libXss.so.1";
+pub const xtst_soname = "libXtst.so.6";
 pub const drm_soname = "libdrm.so.2";
 pub const gbm_soname = "libgbm.so.1";
 pub const pipewire_soname = "libpipewire-0.3.so.0";
@@ -48,4 +52,6 @@ pub const alsa_soname = "libasound.so.2";
 pub const sndio_soname = "libsndio.so.7";
 pub const jack_soname = "libjack.so.0";
 pub const libusb_soname = "libusb-1.0.so.0";
+pub const fribidi_soname = "libfribidi.so.0";
+pub const libthai_soname = "libthai.so.0";
 pub const libudev_soname = "libudev.so.1";

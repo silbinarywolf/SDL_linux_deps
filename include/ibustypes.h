@@ -2,8 +2,8 @@
 /* vim:set et sts=4: */
 /* ibus - The Input Bus
  * Copyright (C) 2008-2013 Peng Huang <shawn.p.huang@gmail.com>
- * Copyright (C) 2010-2022 Takao Fujiwara <takao.fujiwara1@gmail.com>
- * Copyright (C) 2008-2022 Red Hat, Inc.
+ * Copyright (C) 2010-2025 Takao Fujiwara <takao.fujiwara1@gmail.com>
+ * Copyright (C) 2008-2025 Red Hat, Inc.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -30,7 +30,7 @@
 
 /**
  * SECTION: ibustypes
- * @short_description: Generic types for  IBus.
+ * @short_description: Generic types for IBus.
  * @stability: Stable
  *
  * This section consists generic types for IBus, including shift/control key
@@ -231,6 +231,26 @@ struct _IBusRectangle {
 };
 
 /**
+ * IBusRGBA:
+ * @red: Red value.
+ * @green: Green value.
+ * @blue: Blue value.
+ * @alpha: Alpha value.
+ *
+ * RGBA definition.
+ *
+ * Since: 1.5.33
+ * Stability: Unstable
+ */
+typedef struct __IBusRGBA IBusRGBA;
+struct __IBusRGBA {
+    float red;
+    float green;
+    float blue;
+    float alpha;
+};
+
+/**
  * IBusFreeFunc:
  * @object: object to be freed.
  *
@@ -340,5 +360,61 @@ typedef enum
     IBUS_INPUT_HINT_PRIVATE             = 1 << 11
 } IBusInputHints;
 
-#endif
+/**
+ * IBUS_MODIFIER_FILTER:
+ *
+ * This is a filter for shortcut keys.
+ * Since: 1.5.32
+ */
+#define IBUS_MODIFIER_FILTER                    \
+       (IBUS_MODIFIER_MASK & ~(                 \
+        IBUS_LOCK_MASK |  /* Caps Lock */       \
+        IBUS_MOD2_MASK |  /* Num Lock */        \
+        IBUS_BUTTON1_MASK |                     \
+        IBUS_BUTTON2_MASK |                     \
+        IBUS_BUTTON3_MASK |                     \
+        IBUS_BUTTON4_MASK |                     \
+        IBUS_BUTTON5_MASK |                     \
+        IBUS_SUPER_MASK |                       \
+        IBUS_HYPER_MASK |                       \
+        IBUS_META_MASK))
 
+/**
+ * IBusMessageDomain:
+ * @IBUS_MESSAGE_ENGINE: The message domain for Engine messages
+ * @IBUS_MESSAGE_PANEL: The message domain for Panel messages
+ *
+ * Since: 1.5.33
+ * Stability: Unstable
+ */
+typedef enum
+{
+  IBUS_MESSAGE_DOMAIN_NONE,
+  IBUS_MESSAGE_DOMAIN_ENGINE,
+  IBUS_MESSAGE_DOMAIN_PANEL
+} IBusMessageDomain;
+
+/**
+ * IBusPreeditFormat:
+ * @IBUS_PREEDIT_FORMAT_RGBA: Use #IBusAttribute with the RGBA.
+ *         This has been a default usage and ibus_attribute_get_attr_type()
+ *         returns @IBUS_ATTR_TYPE_UNDERLINE, @IBUS_ATTR_TYPE_FOREGROUND,
+ *         @IBUS_ATTR_TYPE_BACKGROUND.
+ * @IBUS_PREEDIT_FORMAT_HINT: Use #IBusAttribute with the hints.
+ *         This let #IBusPanelService decides the actual RGBA values to follow
+ *         the current desktop theme and ibus_attribute_get_attr_type()
+ *         returns @IBUS_ATTR_TYPE_HINT.
+ *
+ * You can set the "preedit-format" property of the constructor of
+ * #IBusInputContext or #IBusPanelService.
+ *
+ * Since: 1.5.33
+ * Stability: Unstable
+ */
+typedef enum
+{
+    IBUS_PREEDIT_FORMAT_RGBA,
+    IBUS_PREEDIT_FORMAT_HINT,
+} IBusPreeditFormat;
+
+#endif

@@ -4,8 +4,8 @@
 .{
     .name = .sdl_linux_deps,
     .version = "0.0.0",
-    .fingerprint = 0x4e922ea7877f2e57,
-    .minimum_zig_version = "0.14.0",
+    .fingerprint = 0x4e922ea796ff3248,
+    .minimum_zig_version = "0.15.2",
     .dependencies = .{},
     .paths = .{
         "include/",

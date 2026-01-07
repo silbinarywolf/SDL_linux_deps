@@ -72,6 +72,23 @@ GType ibus_bus_global_binding_type_get_type (void) G_GNUC_CONST;
  */
 #define IBUS_TYPE_BUS_GLOBAL_BINDING_TYPE (ibus_bus_global_binding_type_get_type ())
 
+/* enumerations from "include/ibusengine.h" */
+/**
+ * ibus_engine_msg_code_get_type:
+ * @returns: GType of IBUS_ENGINE_MSG_CODE
+ *
+ * Returns the type of IBUS_ENGINE_MSG_CODE as GType.
+ */
+GType ibus_engine_msg_code_get_type (void) G_GNUC_CONST;
+
+/**
+ * IBUS_TYPE_ENGINE_MSG_CODE:
+ * @returns: GType of IBUS_ENGINE_MSG_CODE
+ *
+ * Returns the type of IBUS_ENGINE_MSG_CODE as GType.
+ */
+#define IBUS_TYPE_ENGINE_MSG_CODE (ibus_engine_msg_code_get_type ())
+
 /* enumerations from "include/ibusobject.h" */
 /**
  * ibus_object_flags_get_type:
@@ -88,6 +105,23 @@ GType ibus_object_flags_get_type (void) G_GNUC_CONST;
  * Returns the type of IBUS_OBJECT_FLAGS as GType.
  */
 #define IBUS_TYPE_OBJECT_FLAGS (ibus_object_flags_get_type ())
+
+/* enumerations from "include/ibuspanelservice.h" */
+/**
+ * ibus_panel_service_msg_code_get_type:
+ * @returns: GType of IBUS_PANEL_SERVICE_MSG_CODE
+ *
+ * Returns the type of IBUS_PANEL_SERVICE_MSG_CODE as GType.
+ */
+GType ibus_panel_service_msg_code_get_type (void) G_GNUC_CONST;
+
+/**
+ * IBUS_TYPE_PANEL_SERVICE_MSG_CODE:
+ * @returns: GType of IBUS_PANEL_SERVICE_MSG_CODE
+ *
+ * Returns the type of IBUS_PANEL_SERVICE_MSG_CODE as GType.
+ */
+#define IBUS_TYPE_PANEL_SERVICE_MSG_CODE (ibus_panel_service_msg_code_get_type ())
 
 /* enumerations from "include/ibusproperty.h" */
 /**
@@ -272,6 +306,36 @@ GType ibus_input_hints_get_type (void) G_GNUC_CONST;
  * Returns the type of IBUS_INPUT_HINTS as GType.
  */
 #define IBUS_TYPE_INPUT_HINTS (ibus_input_hints_get_type ())
+/**
+ * ibus_message_domain_get_type:
+ * @returns: GType of IBUS_MESSAGE_DOMAIN
+ *
+ * Returns the type of IBUS_MESSAGE_DOMAIN as GType.
+ */
+GType ibus_message_domain_get_type (void) G_GNUC_CONST;
+
+/**
+ * IBUS_TYPE_MESSAGE_DOMAIN:
+ * @returns: GType of IBUS_MESSAGE_DOMAIN
+ *
+ * Returns the type of IBUS_MESSAGE_DOMAIN as GType.
+ */
+#define IBUS_TYPE_MESSAGE_DOMAIN (ibus_message_domain_get_type ())
+/**
+ * ibus_preedit_format_get_type:
+ * @returns: GType of IBUS_PREEDIT_FORMAT
+ *
+ * Returns the type of IBUS_PREEDIT_FORMAT as GType.
+ */
+GType ibus_preedit_format_get_type (void) G_GNUC_CONST;
+
+/**
+ * IBUS_TYPE_PREEDIT_FORMAT:
+ * @returns: GType of IBUS_PREEDIT_FORMAT
+ *
+ * Returns the type of IBUS_PREEDIT_FORMAT as GType.
+ */
+#define IBUS_TYPE_PREEDIT_FORMAT (ibus_preedit_format_get_type ())
 
 /* enumerations from "include/ibusxevent.h" */
 /**

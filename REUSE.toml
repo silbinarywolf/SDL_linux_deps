@@ -25,7 +25,10 @@ SPDX-FileCopyrightText = "NONE" # No copyright notice
 SPDX-License-Identifier = "LGPL-2.1-or-later"
 
 [[annotations]]
-path = "include/alsa/ump.h"
+path = [
+    "include/alsa/ump.h",
+    "include/alsa/ump_msg.h",
+]
 precedence = "override" # Override deprecated 'LGPL-2.1+' identifier
 SPDX-FileCopyrightText = "NONE" # No copyright notice
 SPDX-License-Identifier = "LGPL-2.1-or-later"
@@ -41,11 +44,28 @@ path = [
 ]
 SPDX-License-Identifier = "MIT"
 
+# FRIBIDI
+
+[[annotations]]
+path = "include/fribidi*.h"
+SPDX-License-Identifier = "LGPL-2.1-or-later"
+
+[[annotations]]
+path = [
+    "include/fribidi-begindecls.h",
+    "include/fribidi-config.h",
+    "include/fribidi-enddecls.h",
+    "include/fribidi-unicode-version.h",
+]
+SPDX-FileCopyrightText = "NONE" # No copyright notice
+SPDX-License-Identifier = "LGPL-2.1-or-later"
+
 # GLIB
 
 [[annotations]]
 path = [
     "include/aarch64-linux-gnu/glibconfig.h",
+    "include/aarch64-linux-musl/glibconfig.h",
     "include/gio/gio-visibility.h",
     "include/glib/deprecated/gallocator.h",
     "include/glib/glib-visibility.h",
@@ -54,6 +74,7 @@ path = [
     "include/gobject/gmarshal.h",
     "include/gobject/gobject-visibility.h",
     "include/x86_64-linux-gnu/glibconfig.h",
+    "include/x86_64-linux-musl/glibconfig.h",
 ]
 SPDX-FileCopyrightText = "NONE" # No copyright notice
 SPDX-License-Identifier = "LGPL-2.1-or-later"
@@ -91,6 +112,12 @@ SPDX-License-Identifier = "LGPL-2.1-or-later"
 path = "include/libdecor.h"
 SPDX-License-Identifier = "MIT"
 
+# LIBTHAI
+
+[[annotations]]
+path = "include/thai/**"
+SPDX-License-Identifier = "LGPL-2.1-or-later"
+
 # LIBURING
 
 [[annotations]]
@@ -109,6 +136,12 @@ SPDX-FileCopyrightText = [
     "Copyright (C) 2019 Jens Axboe",
     "Copyright (C) 2019 Christoph Hellwig",
 ]
+SPDX-License-Identifier = "(GPL-2.0-only WITH Linux-syscall-note) OR MIT"
+
+[[annotations]]
+path = "include/liburing/io_uring/query.h"
+precedence = "override" # Override deprecated 'GPL-2.0' identifier
+SPDX-FileCopyrightText = "Copyright 2020 Jens Axboe" # From license
 SPDX-License-Identifier = "(GPL-2.0-only WITH Linux-syscall-note) OR MIT"
 
 # LIBUSB
@@ -190,22 +223,14 @@ SPDX-License-Identifier = "MIT AND HPND-sell-variant"
 # LIBXI
 
 [[annotations]]
+path = "include/X11/extensions/XInput.h"
+SPDX-License-Identifier = "MIT-open-group AND HPND"
+
+[[annotations]]
 path = "include/X11/extensions/XInput2.h"
 SPDX-License-Identifier = "MIT"
 
 # LIBXKBCOMMON
-
-[[annotations]]
-path = "include/xkbcommon/xkbcommon.h"
-SPDX-License-Identifier = "X11 AND HPND AND MIT"
-
-[[annotations]]
-path = [
-    "include/xkbcommon/xkbcommon-compat.h",
-    "include/xkbcommon/xkbcommon-compose.h",
-    "include/xkbcommon/xkbcommon-names.h",
-]
-SPDX-License-Identifier = "MIT"
 
 [[annotations]]
 path = "include/xkbcommon/xkbcommon-keysyms.h"
@@ -229,6 +254,12 @@ SPDX-License-Identifier = "HPND-sell-variant"
 path = "include/X11/extensions/scrnsaver.h"
 SPDX-License-Identifier = "X11"
 
+# LIBXTST
+
+[[annotations]]
+path = "include/X11/extensions/XTest.h"
+SPDX-License-Identifier = "MIT-open-group"
+
 # MESA
 
 [[annotations]]
@@ -248,6 +279,20 @@ SPDX-License-Identifier = "LGPL-2.1-or-later"
 
 [[annotations]]
 path = "src/*-protocol.*"
+SPDX-License-Identifier = "MIT"
+
+[[annotations]]
+path = "src/pointer-gestures-unstable-v1-*"
+SPDX-FileCopyrightText = [
+    'Copyright © 2008-2013 Kristian Høgsberg',
+    'Copyright © 2010-2013 Intel Corporation',
+    'Copyright © 2013 Rafael Antognolli',
+    'Copyright © 2013 Jasper St. Pierre',
+    'Copyright © 2014 Jonas Ådahl',
+    'Copyright © 2014 Jason Ekstrand',
+    'Copyright © 2014-2015 Collabora, Ltd.',
+    'Copyright © 2015 Red Hat Inc.',
+] # From upstream repo
 SPDX-License-Identifier = "MIT"
 
 [[annotations]]
@@ -291,6 +336,8 @@ SPDX-License-Identifier = "X11"
 
 [[annotations]]
 path = [
+    "include/X11/extensions/XI.h",
+    "include/X11/extensions/xtestconst.h",
     "include/X11/X.h",
     "include/X11/Xmd.h",
     "include/X11/Xproto.h",

@@ -1,7 +1,7 @@
 /* vim:set et sts=4: */
 /* ibus - The Input Bus
  * Copyright (C) 2008-2010 Peng Huang <shawn.p.huang@gmail.com>
- * Copyright (C) 2008-2010 Red Hat, Inc.
+ * Copyright (C) 2008-2025 Red Hat, Inc.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -51,7 +51,7 @@
  *
  * IBus micro version.
  */
-#define IBUS_MICRO_VERSION				(31)
+#define IBUS_MICRO_VERSION				(33)
 
 /**
  * IBUS_CHECK_VERSION:
@@ -68,5 +68,7 @@
      (IBUS_MAJOR_VERSION == (major) && IBUS_MINOR_VERSION == (minor) && \
       IBUS_MICRO_VERSION >= (micro)))
 
+#include <glib.h>
+#include <ibus-visibility.h>
 #endif
 
