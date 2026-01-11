@@ -13,6 +13,8 @@ Issues with this package are tracked in [castholm/SDL](https://github.com/castho
 
 ## License
 
+[![REUSE status](https://api.reuse.software/badge/github.com/castholm/SDL_linux_deps)](https://api.reuse.software/info/github.com/castholm/SDL_linux_deps)
+
 This repository is [REUSE-compliant](https://reuse.software/). The effective SPDX license expression for the repository as a whole is:
 
 ```
