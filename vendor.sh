@@ -81,7 +81,7 @@ PULSEAUDIO_URL=https://gitlab.freedesktop.org/pulseaudio/pulseaudio.git
 PULSEAUDIO_REV=1f020889c9aa44ea0f63d7222e8c2b62c3f45f68 # v17.0
 
 SDL_URL=https://github.com/libsdl-org/SDL.git
-SDL_REV=a962f40bbba175e9716557a25d5d7965f134a3d3 # release-3.4.0
+SDL_REV=147a8ee32dbf9ac02f3794964490687b6bbda1bc # release-3.4.14
 
 SNDIO_URL=https://github.com/ratchov/sndio.git
 SNDIO_REV=366b5c84d57c9ce73387c51ca48755d36e3fe3a7 # v1.10.0
@@ -90,7 +90,7 @@ SYSTEMD_URL=https://github.com/systemd/systemd.git
 SYSTEMD_REV=9ca433482f2281d71718718705ca8cd3bf562ad6 # v259
 
 WAYLAND_URL=https://gitlab.freedesktop.org/wayland/wayland.git
-WAYLAND_REV=736d12ac67c20c60dc406dc49bb06be878501f86 # 1.24.0
+WAYLAND_REV=87cc8a8728a923fc57938faa81ba0e74f34ecdc7 # 1.26.0
 
 XCBPROTO_URL=https://gitlab.freedesktop.org/xorg/proto/xcbproto.git
 XCBPROTO_REV=77d7fc04da729ddc5ed4aacf30253726fac24dca # xcb-proto-1.17.0
@@ -156,7 +156,7 @@ wayland() {
 	)
 	repo_copy WAYLAND "${headers[@]}" include
 
-	version=1.24.0
+	version=1.26.0
 	version_parts=(${version//./ })
 	mkdir -p include
 	sed "$WAYLAND_DIR/src/wayland-version.h.in" \
